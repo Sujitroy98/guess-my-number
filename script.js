@@ -40,12 +40,5 @@ document.querySelector('.again').addEventListener('click', function(){
   displayScore(score);
   displayBackgroundColor('#222');
   displayWidth('15rem');
-  
-    // document.querySelector('.score').textContent = score;
-    // document.querySelector('.message').textContent= 'start guessing...';
     document.querySelector('.guess').value = '' ;
-    
-  
-    
-  
   })
