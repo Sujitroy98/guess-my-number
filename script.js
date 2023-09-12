@@ -39,34 +39,25 @@ document.querySelector('.check').addEventListener('click', function () {
 
     // ! guess is equal
   } else if (guess === secretNumber) {
-    
     displayMessage(` 😁 Correct number!`);
-    
-    displayNumber(secretNumber);
-    
-
-    
+    displayNumber(secretNumber); 
     displayBackgroundColor('#60b347');
     displayWidth('30rem')
     
+    // ! setting highscore
     if(score > highscore) {
       highscore = score ;
       displayHighscore(highscore);
-      
     }
   }
-
     //! guess is not equal
     else if (guess !== secretNumber){
-      if (score > 1) {
-        
+      if (score > 1) {    
         displayMessage(guess > secretNumber ? 'Number too high!': 'Number too low!');
         score--;
         displayScore(score);
-        
       }
       else {
-        
         displayMessage(`😭You lost the Game!`);
         displayScore(0);
         
@@ -77,7 +68,6 @@ document.querySelector('.again').addEventListener('click', function(){
     score = '20';
     secretNumber = Math.trunc(Math.random() * 20) + 1;
     console.log(secretNumber);
-  
   
   displayMessage('start guessing...');
   displayNumber('?');
